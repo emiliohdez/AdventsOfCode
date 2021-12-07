@@ -1,8 +1,8 @@
 input = readlines(joinpath(@__DIR__, "input.txt"));
+commands = split.(input, " ")
 
 # PART 1
 # position = [0, 0]
-# commands = split.(input, " ")
 # for command in commands
 #     if command[1] == "forward"
 #         position[1] += parse(Int64, command[2])
@@ -17,7 +17,6 @@ input = readlines(joinpath(@__DIR__, "input.txt"));
 # PART 2
 position = [0, 0]
 aim = 0
-commands = split.(input, " ")
 for command in commands
     X = parse(Int64, command[2])
     if command[1] == "forward"
